@@ -13,6 +13,8 @@ _UPDATE_HK() {
 	echo -e "开始测速..."
 	./CloudflareST  -o result_hosts_HK.txt
 	grep -oE '[0-9]{1,3}(\.[0-9]{1,3}){3}' result_hosts_HK.txt  | awk '{print $0 ":443#HK"}' > ip_addresses_HK.txt
+
+	rm -rf result_hosts_HK.txt
 	echo -e "香港完成..."
 }
 
