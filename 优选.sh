@@ -37,7 +37,7 @@ _UPDATE_ADD() {
 
 
 
-# _UPDATE_HK
+_UPDATE_HK
 
  _UPDATE_ADD
 
