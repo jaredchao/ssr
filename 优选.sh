@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
-export PATH
 # --------------------------------------------------------------
 #	项目: CloudflareSpeedTest 自动更新 Hosts
 #	版本: 1.0.4
@@ -23,6 +21,10 @@ _UPDATE_HK() {
 
 _UPDATE_ADD() {
 	echo -e "提交GIT..."
+
+	git config --global core.autocrlf input
+
+
 	git add .
 
 	git commit -m "update"
@@ -30,11 +32,12 @@ _UPDATE_ADD() {
 	git push
 	
 	echo -e "提交完成..."
+
 }
 
 
 
-_UPDATE_HK
+# _UPDATE_HK
 
  _UPDATE_ADD
 
